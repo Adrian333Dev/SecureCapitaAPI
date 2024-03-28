@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: securecapita
+  datasource:
+    url: jdbc:postgresql://localhost:5432/securecapita
+    username: postgres
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        format_sql: true
+  sql:
+    init:
+      mode: never
+      continue-on-error: false
